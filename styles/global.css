@@ -1,0 +1,112 @@
+/* Custom CSS Variables - Color Palette */
+:root {
+  --primary-color: #00ff00;        /* Matrix green */
+  --secondary-color: #00ff41;      /* Bright green */
+  --accent-color: #00ff88;         /* Light green */
+  --background-dark: #000000;      /* Black */
+  --background-light: #001100;     /* Dark green */
+  --text-color: #00ff00;           /* Green text */
+  --border-color: rgba(0, 255, 0, 0.2);
+  
+  /* Font families */
+  --font-headings: 'Montserrat', -apple-system, sans-serif;
+  --font-body: 'Open Sans', -apple-system, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 18px;
+  background-color: var(--background-dark);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+a {
+  color: #00ff41;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #00ff88;
+  text-decoration: underline;
+  text-shadow: 0 0 5px #00ff41;
+}
+ 
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Matrix-style enhancements */
+* {
+  box-sizing: border-box;
+}
+
+/* Headings use Montserrat font */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: -0.02em;
+}
+
+/* Body text inherits Open Sans from body */
+p, div, span, li, ul, ol {
+  color: var(--text-color);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Style for any boxes or containers */
+div, section, article, main, aside, header, footer {
+  background-color: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 4px;
+}
+
+/* Ensure buttons and interactive elements are visible */
+button, input, textarea, select {
+  background-color: #001100;
+  color: #00ff00;
+  border: 1px solid #00ff41;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+button:hover, input:hover, textarea:hover, select:hover {
+  background-color: #002200;
+  border-color: #00ff88;
+  box-shadow: 0 0 8px rgba(0, 255, 0, 0.3);
+}
+
+/* Style for code blocks if any */
+code, pre {
+  background-color: #001100;
+  color: #00ff41;
+  border: 1px solid #00ff00;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+}
