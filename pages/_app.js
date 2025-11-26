@@ -18,9 +18,6 @@
 
 // Import global CSS styles that apply to the entire application
 import '../styles/global.css';
-
-// Import Next.js Head component to add Google Fonts
-import Head from 'next/head';
  
 /**
  * App - The root application component
@@ -42,19 +39,6 @@ import Head from 'next/head';
  */
 export default function App({ Component, pageProps }) {
   // Render the active page component with its props
-  return (
-    <>
-      {/* Add Google Fonts to all pages */}
-      <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link 
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap" 
-          rel="stylesheet" 
-        />
-      </Head>
-      
-      <Component {...pageProps} />
-    </>
-  );
+  // Google Fonts are now loaded in _document.js (the proper Next.js way)
+  return <Component {...pageProps} />;
 }
